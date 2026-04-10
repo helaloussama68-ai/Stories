@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>StoryVerse</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color: white;
+  text-align: center;
+}
+
+/* ===== INTRO ===== */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0b1220;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 3s forwards;
+}
+
+#intro h1 {
+  font-size: 60px;
+}
+
+#intro p {
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  80% {opacity: 1;}
+  100% {opacity: 0; visibility: hidden;}
+}
+
+/* ===== TITLE ===== */
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 18px;
+  margin: 20px auto;
+  width: 320px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== STORY ===== */
+.story {
+  display: none;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #111827;
+  padding: 25px;
+  border-radius: 15px;
+  line-height: 2;
+  text-align: right;
+  font-size: 18px;
+}
+
+.story.active {
+  display: block;
+}
+
+/* ===== IMAGES ===== */
+img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== INTRO ===== -->
+<div id="intro">
+  <h1>📖 StoryVerse</h1>
+  <p>قصص تُشعرك وكأنك داخلها</p>
+</div>
+
+<!-- ===== HEADER ===== -->
+<div class="logo">📖 StoryVerse</div>
+
+<!-- ===== BUTTON ===== -->
+<div class="card" onclick="showStory()">
+🎬 السلسلة الأولى: الطريق المكسور
+</div>
+
+<!-- ===== STORY ===== -->
+<div class="story" id="storyBox">
+
+<h2>📖 الحلقة 1: البداية المجهولة</h2>
+
+<p>
+في مدينة هادئة، كان هناك شاب اسمه آدم…  
+بدأ رحلته وهو لا يملك شيئًا سوى حلم كبير.
+</p>
+
+<img src="https://images.unsplash.com/photo-1520975922284-9d0c1b4d6c35?auto=format&fit=crop&w=1000&q=60">
+
+<p>
+كل يوم كان يواجه صعوبة جديدة…  
+لكن لم يكن يتوقف أبدًا.
+</p>
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=60">
+
+<p>
+حتى عندما فشل، كان يعود أقوى.
+</p>
+
+<img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1000&q=60">
+
+<p>
+وفي لحظة هدوء، فهم أن النجاح ليس سرعة…  
+بل صبر واستمرار.
+</p>
+
+<p style="margin-top:20px; opacity:0.8; text-align:center;">
+✍️ تم إنشاء هذه الحلقة بواسطة أسامة
+</p>
+
+<p style="margin-top:20px; text-align:center;">
+🔥 هذه فقط البداية… القادم أقوى
+</p>
+
+</div>
+
+<script>
+function showStory(){
+  document.getElementById("storyBox").classList.add("active");
+}
+</script>
+
+</body>
+</html>

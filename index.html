@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>StoryVerse</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color: white;
+  text-align: center;
+}
+
+/* ===== INTRO ===== */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0b1220;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 3s forwards;
+}
+
+#intro h1 {
+  font-size: 45px;
+}
+
+#intro p {
+  opacity: 0.8;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  80% {opacity: 1;}
+  100% {opacity: 0; visibility: hidden;}
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== STORY ===== */
+.story {
+  display: none;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #111827;
+  padding: 20px;
+  border-radius: 15px;
+  line-height: 1.8;
+  text-align: right;
+}
+
+.story.active {
+  display: block;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== INTRO ===== -->
+<div id="intro">
+  <h1>📖 StoryVerse</h1>
+  <p>قصص تُكتب لتُشعر… لا لتُقرأ فقط</p>
+</div>
+
+<!-- ===== SERIES ===== -->
+<div class="card" onclick="showStory()">
+🎬 السلسلة الأولى: الطريق المكسور
+</div>
+
+<!-- ===== STORY ===== -->
+<div class="story" id="storyBox">
+
+<h2>📖 الحلقة 1: البداية</h2>
+
+<p>
+في مدينة هادئة، كان هناك شاب اسمه آدم…  
+بدأ رحلة صعبة مليئة بالتحديات.
+</p>
+
+<p>
+واجه الفشل عدة مرات لكنه لم يتوقف.
+</p>
+
+<p>
+وفي النهاية فهم أن النجاح يحتاج صبر.
+</p>
+
+<p style="margin-top:20px; opacity:0.8;">
+✍️ تم إنشاء هذه الحلقة بواسطة أسامة
+</p>
+
+<p style="margin-top:20px;">
+✨ هذه فقط البداية… القادم أقوى 🔥
+</p>
+
+</div>
+
+<script>
+function showStory(){
+  document.getElementById("storyBox").classList.add("active");
+}
+</script>
+
+</body>
+</html>
